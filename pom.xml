@@ -8,12 +8,12 @@
 
 	<repositories>
 		<repository>
-			<id>fast-async-worldedit-repo</id>
-			<url>https://mvn.intellectualsites.com/content/repositories/releases</url>
+			<id>maven-repo</id>
+			<url>https://repo.maven.apache.org/maven2/</url>
 		</repository>
 		<repository>
 			<id>multiverse-repo</id>
-			<url>https://repo.onarandombox.com/content/repositories/multiverse</url>
+			<url>https://repo.onarandombox.com/content/groups/public/</url>
 		</repository>
 		<repository>
 			<id>protocollib-repo</id>
@@ -45,25 +45,31 @@
 		<dependency>
 			<groupId>org.spigotmc</groupId>
 			<artifactId>spigot-api</artifactId>
-			<version>1.14.4-R0.1-SNAPSHOT</version>
+			<version>1.16.5-R0.1-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.fastasyncworldedit</groupId>
 			<artifactId>FastAsyncWorldEdit-Core</artifactId>
-			<version>1.17-421</version>
+			<version>2.0.1</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.fastasyncworldedit</groupId>
 			<artifactId>FastAsyncWorldEdit-Bukkit</artifactId>
-			<version>1.17-421</version>
+			<version>2.0.1</version>
 			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>FastAsyncWorldEdit-Core</artifactId>
+					<groupId>*</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.onarandombox.multiversecore</groupId>
 			<artifactId>Multiverse-Core</artifactId>
-			<version>4.1.0</version>
+			<version>4.3.1</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
